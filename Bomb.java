@@ -6,7 +6,7 @@ public class Bomb extends Actor
     {
         move(-10);
         
-        if(getX() < 0) {
+        if(getX() <= 0) {
             resetBomb();
         }
     }
@@ -17,7 +17,7 @@ public class Bomb extends Actor
         if(num == 0) {
             setLocation(600, 100);
         } else {
-            setLocation 600, 300);
+            setLocation(600, 300);
         }
     }
 }
