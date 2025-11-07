@@ -9,6 +9,12 @@ public class Bomb extends Actor
         if(getX() <= 0) {
             resetBomb();
         }
+        
+        if(isTouching(Hero.class)){
+            GameOver gameOver = new GameOver();
+            getWorld().addObject(gameOver, 300, 200);
+            getWorld().removeObject(this);
+        }
     }
     
     public void resetBomb()
